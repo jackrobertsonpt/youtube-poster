@@ -40,3 +40,8 @@ jobs:
       - name: output metadata returned
         run: |
             cat metaout.json
+
+      - name: remove video file
+        uses: JesseTG/rm@v1.0.3
+        with:
+          path: video.mp4
