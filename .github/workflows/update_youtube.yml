@@ -27,7 +27,10 @@ jobs:
               -debug \
               -secrets $RUNNER_TEMP/client_secrets.json \
               -cache $RUNNER_TEMP/request.token \
-              -filename test_video.mp4 \
-              -description "Test video for video uploader" \
-              -tags tag1,tag2,tag3 \
-              -title "test video" \
+              -filename test_video.mp4  \
+              -metaJSON metadata.json   \
+              -metaJSONout metaout.json \
+
+      - name: output metadata returned
+        run: |
+            cat metaout.json
