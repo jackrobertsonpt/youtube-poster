@@ -53,4 +53,4 @@ jobs:
             git config --global user.name "Jack Robertson"
             git rm ./video.mp4
             git commit -m "📹 Remove video.mp4 file"
-            git push origin master
+            git push origin main
