@@ -5,12 +5,12 @@
 	"title": "Complete workflow test.",
 	"license": "creativeCommon",
 	"language": "en",
-	"publishAt": "2023-02-03T14:51:0Z",
+	"publishAt": "2023-02-03T14:51:00Z",
 	"categoryId": "10",
 	"embeddable": true,
 	"description": "Testing the complete workflow of the pipeline.\n\nShould post out to all Socials!\nIncluding:\n- Instagram\n- Facebook\n- Twitter\n- GMB\n- Reddit\n\nExcluding\n- Youtube\n- TikTok",
 	"madeForKids": false,
 	"privacyStatus": "public",
-	"recordingdate": "2023-02-03T14:51:0Z",
+	"recordingdate": "2023-02-03T14:51:00Z",
 	"publicStatsViewable": false
 }
