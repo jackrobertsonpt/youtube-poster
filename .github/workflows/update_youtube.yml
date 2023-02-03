@@ -44,6 +44,5 @@ jobs:
       - name: Remove video from repository
         uses: EndBug/add-and-commit@v9
         with:
-          default_author: github_actions
           message: '📹 Remove video.mp4 file'
           remove: './video.mp4'
