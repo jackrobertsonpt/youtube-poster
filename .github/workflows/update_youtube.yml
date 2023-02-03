@@ -33,7 +33,7 @@ jobs:
               -debug \
               -secrets $RUNNER_TEMP/client_secrets.json \
               -cache $RUNNER_TEMP/request.token \
-              -filename test_video.mp4  \
+              -filename video.mp4  \
               -metaJSON metadata.json   \
               -metaJSONout metaout.json \
 
