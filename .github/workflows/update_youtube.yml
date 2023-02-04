@@ -27,7 +27,7 @@ jobs:
 
       - name: download video from url
         run: |
-            wget ${{ env.VIDEO_URL }} ./video.mp4
+            wget -O ./video.mp4 ${{ env.VIDEO_URL }} 
 
 
       - name: Setup YouTube Uploader
