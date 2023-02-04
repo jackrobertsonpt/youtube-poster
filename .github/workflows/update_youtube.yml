@@ -51,19 +51,3 @@ jobs:
       - name: output metadata returned
         run: |
             cat metaout.json
-
-
-      #- name: Remove video from repository
-      #  uses: EndBug/add-and-commit@v9
-      #  with:
-      #    message: '📹 Remove video.mp4 file'
-      #    remove: './video.mp4'
-
-
-      # - name: delete video
-      #   run: |
-      #       git config --global user.email "jackrobertsonpt@gmail.com"
-      #       git config --global user.name "Jack Robertson"
-      #       git rm ./video.mp4
-      #       git commit -m "📹 Remove video.mp4 file"
-      #       git push origin main
