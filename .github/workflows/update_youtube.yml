@@ -8,10 +8,15 @@ on:
 
   workflow_dispatch:
 
+env:
+  VIDEO_URL: ${{ github.event.head_commit.message }}
+
 jobs:
 
   build:
-    if: "contains(github.event.head_commit.message, 'publish')"
+
+    # The commit message should be the URL of the video you want to retrieve.
+    if: "contains(github.event.head_commit.message, 'https')"
     
     runs-on: ubuntu-latest
 
@@ -19,6 +24,11 @@ jobs:
 
       - name: checkout this repo
         uses: actions/checkout@v2
+
+      - name: download video from url
+        run: |
+            wget ${{ env.VIDEO_URL }} ./video.mp4
+
 
       - name: Setup YouTube Uploader
         uses: AnimMouse/setup-youtubeuploader@v1
@@ -37,9 +47,11 @@ jobs:
               -metaJSON metadata.json   \
               -metaJSONout metaout.json \
 
+
       - name: output metadata returned
         run: |
             cat metaout.json
+
 
       #- name: Remove video from repository
       #  uses: EndBug/add-and-commit@v9
@@ -47,10 +59,11 @@ jobs:
       #    message: '📹 Remove video.mp4 file'
       #    remove: './video.mp4'
 
-      - name: delete video
-        run: |
-            git config --global user.email "jackrobertsonpt@gmail.com"
-            git config --global user.name "Jack Robertson"
-            git rm ./video.mp4
-            git commit -m "📹 Remove video.mp4 file"
-            git push origin main
+
+      # - name: delete video
+      #   run: |
+      #       git config --global user.email "jackrobertsonpt@gmail.com"
+      #       git config --global user.name "Jack Robertson"
+      #       git rm ./video.mp4
+      #       git commit -m "📹 Remove video.mp4 file"
+      #       git push origin main
