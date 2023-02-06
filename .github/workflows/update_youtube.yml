@@ -16,7 +16,7 @@ jobs:
   build:
 
     # The commit message should be the URL of the video you want to retrieve.
-    if: "contains(github.event.head_commit.message, 'https')"
+    if: "contains(github.event.head_commit.message, 'http')"
     
     runs-on: ubuntu-latest
 
